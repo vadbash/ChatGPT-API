@@ -18,7 +18,6 @@ def welcome(message):
     markup.add(btn1)
     bot.reply_to(message, "Hello, click chatGPT and write one question", reply_markup=markup)
 
-# Define the function that will interact with the GPT AP
     @bot.message_handler(regexp="ChatGPT")
     def send_welcome(message):
         msg = bot.send_message(message.chat.id, text="Type your question")
