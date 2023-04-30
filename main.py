@@ -1,7 +1,7 @@
 import openai
 import re
 
-API_KEY = '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'
+API_KEY = 'Chatgpt_api_key'
 openai.api_key = f'{API_KEY}'
 
 #Function
