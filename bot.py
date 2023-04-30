@@ -5,10 +5,10 @@ import openai
 import os
 
 #bot connect
-bot = telebot.TeleBot('5674088425:AAHIOD9tM3zflxg2eBrmt4dkrbyua3ZmDeQ')
+bot = telebot.TeleBot('TG_bot_token')
 
 #chatgpt api connect
-API_KEY = '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'
+API_KEY = 'Chatgpt_api_key'
 openai.api_key = f'{API_KEY}'
 
 @bot.message_handler(commands=['start'])
@@ -38,7 +38,7 @@ def welcome(message):
         message_text = str(message.text)
         prompt = message_text
         answer = ask_gpt(prompt)
-        
+
         #output
         bot.send_message(message.chat.id, text=f"{answer}")
         bot.send_message(message.chat.id, text=f"Whant other question? Click ChatGPT one more time")
